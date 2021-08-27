@@ -15,7 +15,7 @@ Pizza.prototype.sizePrice = function() {
 }
 
 Pizza.prototype.toppingPrice = function() {
-  for (let i=0; i<=this.topping.length; i++) {
+  for (let i=0; i <= this.topping.length; i++) {
     this.price += 2;
   }
 };
@@ -24,12 +24,20 @@ $(document).ready(function() {
   $("form#pizza-form").submit(function(event) {
     event.preventDefault();
     let selectSize = $("input:radio[name=size]:checked").val();
+    let selectTopping = $("input:checkbox[name=toppings]:checked");
+    let toppingsOnPizza = [];
 
-    let pizzaOrder = new Pizza(selectSize);
+    selectTopping.each(function() {
+      toppingsOnPizza.push($(this).val());
+    })
+
+    let pizzaOrder = new Pizza(selectSize, toppingsOnPizza);
     pizzaOrder.sizePrice();
+    pizzaOrder.toppingPrice();
 
     $("#orderPizza").show();
     $("#selectSize").text(pizzaOrder.size);
+    $("#pizzaTopping").text(pizzaOrder.topping);
     $("#pizzaCost").text(pizzaOrder.price);
   });
 });
