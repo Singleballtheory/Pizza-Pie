@@ -11,8 +11,8 @@ Expected: Pizza {size: "Small", topping: Array(2), price: 0}
 ```
 ```
 Test: It should change the cost of the pizza based upon the size selected.
-Code: new Pizza ("Small", "Pepperoni")
-Expected: Pizza {size: "Small", "Pepperoni", price: 10}
+Code: sizePrice ("Small")
+Expected: 10
 ```
 
 Test: It should change the cost of the pizza if a topping is selected.

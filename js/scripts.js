@@ -4,15 +4,17 @@ function Pizza(size, topping) {
   this.price = 0;
 }
 
-// Pizza.prototype.sizePrice = function(size) {
+// Pizza.prototype.sizePrice = function() {
 //   if (this.size === "Small") {
-//   return this.price += 10;
+//    this.price += 10;
 //   }
+//   return this.price;
 // }
 
-function sizePrice() {
-  price = 0;
+function sizePrice(size) {
+  let price = 0;
   if (size === "Small") {
     price += 10;
   }
+  return price;
 }
