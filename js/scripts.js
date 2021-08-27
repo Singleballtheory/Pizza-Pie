@@ -15,7 +15,7 @@ Pizza.prototype.sizePrice = function() {
 }
 
 Pizza.prototype.toppingPrice = function() {
-  for (let i=0; i <= this.topping.length; i++) {
+  for (let i=0; i < this.topping.length; i++) {
     this.price += 2;
   }
 };
@@ -35,7 +35,7 @@ $(document).ready(function() {
     pizzaOrder.sizePrice();
     pizzaOrder.toppingPrice();
 
-    $("#orderPizza").show();
+    $("#pizzaMade").show();
     $("#selectSize").text(pizzaOrder.size);
     $("#pizzaTopping").text(pizzaOrder.topping);
     $("#pizzaCost").text(pizzaOrder.price);
