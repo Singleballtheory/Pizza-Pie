@@ -18,12 +18,19 @@ Pizza.prototype.toppingPrice = function() {
   for (let i=0; i<=this.topping.length; i++) {
     this.price += 2;
   }
-}
+};
 
-$Document.ready(function() {
-  $("form#pizzaForm").submit(function(event) {
+$(document).ready(function() {
+  $("form#pizza-form").submit(function(event) {
     event.preventDefault();
+    let selectSize = $("input:radio[name=size]:checked").val();
 
+    let pizzaOrder = new Pizza(selectSize);
+    pizzaOrder.sizePrice();
+
+    $("#orderPizza").show();
+    $("#selectSize").text(pizzaOrder.size);
+    $("#pizzaCost").text(pizzaOrder.price);
   });
 });
 
