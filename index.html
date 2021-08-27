@@ -8,5 +8,46 @@
   <title>Pizza-Pie</title>
 </head>
 <body>
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Pizza Place</h1>
+      <h3>Maybe some other stuff</h3>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <form id="pizzaForm">
+            <h4>Choose Your Size</h4>
+            <div class="radio">
+              <label>
+                <input type="radio" name="size" value="Small" checked>
+                Small
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="size" value="Medium">
+                Medium
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="size" value="Large">
+                Large
+              </label>
+            </div>
+            <div id="orderPizza">
+              <button type="submit" class="btn btn-primary">Send it!</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div id="pizzaMade">
+          <p></p>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
