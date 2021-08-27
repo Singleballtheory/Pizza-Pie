@@ -1,3 +1,12 @@
+Specs
+```
+Test: It should create a new pizza with the size, topping and price input
+Code: new Pizza ("Small", "Pepperoni")
+Expected: Pizza {size: "Small", topping: "Pepperoni", price: 0}
+```
+```
+
+
 Need to pass:
 Constructors and prototypes
 application works
