@@ -4,4 +4,4 @@ function Pizza(size, topping) {
   this.price = 0;
 }
 
-new Pizza = Pizza("Small", "Pepperoni");
+new Pizza = Pizza("Small", ["Pepperoni", "Ham"]);
