@@ -1,5 +1,6 @@
 Specs
 ```
+Pizza
 Test: It should create a new pizza with the size, topping and price set to 0.
 Code: new Pizza ("Small", "Pepperoni")
 Expected: Pizza {size: "Small", topping: "Pepperoni", price: 0}
@@ -10,9 +11,11 @@ Code: new Pizza ("Small", ["Pepperoni", "Ham"])
 Expected: Pizza {size: "Small", topping: Array(2), price: 0}
 ```
 ```
+sizePrice
 Test: It should change the cost of the pizza based upon the size selected.
 Code: sizePrice ("Small")
 Expected: 10
+```
 ```
 
 Test: It should change the cost of the pizza if a topping is selected.
